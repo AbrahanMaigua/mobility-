@@ -23,7 +23,7 @@ app.get('/', (req, res) => {
 });
 
 app.get('/model', (req, res) => {
-  res.render('index');
+  res.render('modelos.pug');
 });
 
 

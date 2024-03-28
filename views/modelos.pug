@@ -1,11 +1,21 @@
-
+// views/index.pug
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    title Cover - Free Bulma template
+    link(rel='shortcut icon', href='../images/fav_icon.png', type='image/x-icon')
+    link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css')
+    link(href='https://fonts.googleapis.com/css?family=Open+Sans', rel='stylesheet')
+    // Bulma Version 1
+    link(rel='stylesheet', href='/bulma/css/bulma.min.css')
+    link(rel='stylesheet', href='/css/styles.css')
+    link(rel='stylesheet', href='/css/tabs.css')
+    script(src='https://kit.fontawesome.com/7dc3015a44.js', crossorigin='anonymous')
 section.hero.is-info
   .hero-body
-    .container
-      h1.title
-        | Tabs
-      h2.subtitle
-        | example
+    
   #nav.tabs.is-boxed.is-centered.main-menu
     ul
       li#1(data-target='pane-1')
@@ -181,5 +191,9 @@ section.hero.is-info
         h6 Sixth level
         p
           | Cras in nibh lacinia, venenatis nisi et, auctor urna. Donec pulvinar lacus sed diam dignissim, ut eleifend eros accumsan. Phasellus non tortor eros. Ut sed rutrum lacus. Etiam purus nunc, scelerisque quis enim vitae, malesuada ultrices turpis. Nunc vitae maximus purus, nec consectetur dui. Suspendisse euismod, elit vel rutrum commodo, ipsum tortor maximus dui, sed varius sapien odio vitae est. Etiam at cursus metus.
-script(src='../js/bulma.js')
-script(src='../js/tabs.js')
+script(src='/js/tab.js')
+
+// views/index.pug
+
+script(src='/js/bulma.js')
+// views/index.pug
