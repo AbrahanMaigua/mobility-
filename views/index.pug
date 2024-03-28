@@ -1,0 +1,271 @@
+// views/index.pug
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    title Cover - Free Bulma template
+    link(rel='shortcut icon', href='../images/fav_icon.png', type='image/x-icon')
+    link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css')
+    link(href='https://fonts.googleapis.com/css?family=Open+Sans', rel='stylesheet')
+    // Bulma Version 1
+    link(rel='stylesheet', href='/bulma/css/bulma.min.css')
+    link(rel='stylesheet', href='/css/styles.css')
+
+    style(type='text/css').
+      html,
+      body {
+      font-family: 'Open Sans';
+      }
+      img {
+      padding: 5px;
+      border: 1px solid #ccc;
+      }
+section.hero.is-fullheight.is-default.is-bold
+  .hero-head
+    nav.navbar
+      .container
+        .navbar-brand
+          a.navbar-item(href='../')
+            img(src='../images/bulma.png', alt='Logo')
+          span.navbar-burger.burger(data-target='navbarMenu')
+            span
+            span
+            span
+        #navbarMenu.navbar-menu
+          .navbar-end
+            .tabs.is-right
+              ul
+                li.is-active
+                  a Home
+                li
+                  a(href='model') Examples
+                li
+                  a(href='') Features
+                li
+                  a(href='') Team
+                li
+                  a(href='') Help
+  .hero-body
+    .container.has-text-centered
+      .columns.is-vcentered
+        .column.is-5
+          figure.image.is-4by3
+            img(src='https://picsum.photos/800/600/?random', alt='Description')
+        .column.is-6.is-offset-1
+          h1.title.is-2
+            | Superhero Scaffolding
+          h2.subtitle.is-4
+            | Let this cover page describe a product or service.
+          br
+          p.has-text-centered
+            a.button.is-medium.is-info.is-outlined
+              | Learn more
+  .hero-foot
+    .container
+      .tabs.is-centered
+        ul
+          li
+            a And this is the bottom
+
+section.container
+  .columns.features
+    .column.is-4
+      .card.is-shady
+        .card-image
+          figure.image.is-4by3
+            img.modal-button(src='https://images.unsplash.com/photo-1515555230216-82228b88ea98?auto=format&fit=crop&w=900&q=60', alt='Placeholder image', data-target='modal-image2')
+        .card-content
+          .content
+            h4 Click on image above
+            p
+              | Purus semper eget duis at tellus at urna condimentum mattis. Non blandit massa enim nec. Integer enim neque volutpat ac tincidunt vitae semper quis. Accumsan tortor posuere ac ut consequat semper viverra nam.
+            span.button.is-link.modal-button(data-target='modal-image2') Image modal
+    .column.is-4
+      .card.is-shady
+        .card-image
+          figure.image.is-4by3
+            img(src='https://res.cloudinary.com/crakerss/image/upload/c_scale,q_auto:eco,w_1440/v1502988509/background_conifer/MS.jpg', alt='Placeholder image')
+        .card-content
+          .content
+            h4 Tempor orci dapibus faber in.
+            p
+              | Ut venenatis tellus in metus vulputate. Amet consectetur adipiscing elit pellentesque. Sed arcu non odio euismod lacinia at quis risus. Faucibus turpis in eu mi bibendum neque egestas cmonsu songue. Phasellus vestibulum lorem
+              | sed risus.
+            span.button.is-link.modal-button(data-target='modal-card') Modal Card
+   
+    .column.is-4
+      .card.is-shady
+        .card-image
+          figure.image.is-4by3
+            img.modal-button(src='https://images.unsplash.com/photo-1529774172307-627a0ae46dae?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1171&q=80', alt='butterfly image', data-target='modal-image4')
+        .card-content.modal-button(data-target='modal-card2')
+          .content
+            h4
+              | Click anywhere on card to 
+              br
+              | expand into modal card - header image expands into bigger image
+            p
+              | Purus semper eget duis at tellus at urna condimentum mattis. Non blandit massa enim nec. Integer enim neque volutpat ac tincidunt vitae semper quis.
+            span.button.is-link.modal-button Modal card
+
+
+section.hero.is-white.is-fullheight
+  .hero-body
+    .container
+      .columns.is-vcentered.reverse-columns
+        .column.is-10-mobile.is-offset-1-mobile.is-10-tablet.is-offset-1-tablet.is-5-desktop.is-offset-1-desktop.is-5-widescreen.is-offset-1-widescreen.is-5-fullhd.is-offset-1-fullhd(data-aos='fade-right')
+          h1.title.titled.is-1.mb-6
+            | absurd illustrations that make sense
+          h2.subtitle.subtitled
+            | Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laborum cupiditate dolorum vitae dolores
+            | nesciunt totam magni quas.
+        .column.is-10-mobile.is-offset-1-mobile.is-10-tablet.is-offset-1-tablet.is-4-desktop.is-offset-1-desktop.is-4-widescreen.is-offset-1-widescreen.is-4-fullhd.is-offset-1-fullhd(data-aos='fade-down')
+          figure.image.is-square
+            img(src='../images/undraw_Camera_re_cnp4.svg')
+section.hero.is-medium.has-text-centered
+  .hero-body
+    .container
+      .columns.is-centered
+        .column.is-8(data-aos='zoom-in-up')
+          h1.title.titled.is-1.mb-6
+            | Primary bold title 
+            span#typewriter
+          h2.subtitle.subtitled
+            | Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laborum cupiditate dolorum vitae dolores
+            | nesciunt totam magni quas.
+            | Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+
+
+
+section.section
+  .hero-body
+    .container.has-text-centered
+      .columns.is-vcentered
+        .column.is-5
+          h1.title.is-1 Super Cool Website
+          h2.subtitle.colored.is-4 Lorem ipsum dolor sit amet.
+          p
+            | Lorem, ipsum dolor sit amet consectetur adipisicing elit. Corporis ex deleniti aliquam tempora libero excepturi vero soluta odio optio sed.
+        
+         
+        .column.is-6.is-offset-1
+          .container.has-text-centered
+              h2.title Contact
+              form
+                .field.is-horizontal
+                  .field-body
+                    .field
+                      p.control.has-icons-left
+                        input.input(type='text', placeholder='Name')
+                        span.icon.is-small.is-left
+                          i.fas.fa-user
+                    .field
+                      p.control.has-icons-left.has-icons-right
+                        input.input(type='email', placeholder='Email')
+                        span.icon.is-small.is-left
+                          i.fas.fa-envelope
+                .field.is-horizontal
+                  .field-body
+                    .field
+                      p.control.has-icons-left
+                        input.input(type='text', placeholder='Name')
+                        span.icon.is-small.is-left
+                          i.fas.fa-user
+                    .field
+                      p.control.has-icons-left.has-icons-right
+                        input.input(type='email', placeholder='Email')
+                        span.icon.is-small.is-left
+                          i.fas.fa-envelope
+                    
+                .field.is-horizontal
+                  .field-body
+                    .field
+                      .control
+                        textarea.textarea(placeholder='Message us')
+                .field.is-horizontal
+                  .field-body
+                    .field
+                      .control
+                        button.button.is-primary
+                          | Send message
+
+
+
+footer.section
+  .container
+    .columns.is-multiline(style='border-bottom: 1px solid #dee2e6;')
+      .column.is-3.mb-5
+        a.mb-4.is-inline-block(href='#')
+          img.image(src='bulma-plain-assets/logos/plainb-logo.svg', alt='logo aqui', width='96px')
+        p.has-text-grey-dark.mb-6 Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        
+
+      .column.is-9
+        .columns.is-multiline
+          .column.is-6.is-3-desktop.mb-5
+            h4.is-size-4.has-text-weight-bold.mb-4 Company
+            ul
+              li.mb-2
+                a.button.is-white(href='#') About Us
+              li.mb-2
+                a.button.is-white(href='#') Careers
+              li.mb-2
+                a.button.is-white(href='#') Press
+              li
+                a.button.is-white(href='#') Blog
+          .column.is-6.is-3-desktop.mb-5
+            h4.is-size-4.has-text-weight-bold.mb-4 Pages
+            ul
+              li.mb-2
+                a.button.is-white(href='#') Login
+              li.mb-2
+                a.button.is-white(href='#') Register
+              li.mb-2
+                a.button.is-white(href='#') Add list
+              li
+                a.button.is-white(href='#') Contact
+          .column.is-6.is-3-desktop.mb-5
+            h4.is-size-4.has-text-weight-bold.mb-4 Legal
+            ul
+              li.mb-2
+                a.button.is-white(href='#') Terms
+              li.mb-2
+                a.button.is-white(href='#') About Us
+              li.mb-2
+                a.button.is-white(href='#') Team
+              li
+                a.button.is-white(href='#') Privacy
+          .column.is-6.is-3-desktop.mb-5
+            h4.is-size-4.has-text-weight-bold.mb-4 Resources
+            ul
+              li.mb-2
+                a.button.is-white(href='#') Blog
+              li.mb-2
+                a.button.is-white(href='#') Service
+              li.mb-2
+                a.button.is-white(href='#') Product
+              li
+                a.button.is-white(href='#') Pricing
+    .pt-5.has-text-centered
+      p All rights reserved &copy; Wireframes Corporation 2021
+
+script(src='https://cdnjs.cloudflare.com/ajax/libs/TypewriterJS/2.13.1/core.min.js')
+script.
+  new Typewriter('#typewriter', {
+  strings: ['typewriter', 'Effect', 'typewriter.js', 'example'],
+  autoStart: true,
+  loop: true,
+  });
+script(src='https://unpkg.com/aos@next/dist/aos.js')
+script.
+  AOS.init({
+  once: true
+  });
+
+script(src='https://unpkg.com/bulma-modal-fx/dist/js/modal-fx.min.js')
+script(src='https://code.jquery.com/jquery-3.7.0.slim.min.js', integrity='sha256-tG5mcZUtJsZvyKAxYLVXrmjKBVLd6VpVccqz/r4ypFE=', crossorigin='anonymous')
+script(src='../js/wild.js')
+
+
+script(src='/js/bulma.js')
