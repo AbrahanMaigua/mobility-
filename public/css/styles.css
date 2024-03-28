@@ -4,6 +4,10 @@ color: #333;
 -moz-osx-font-smoothing: grayscale;
 }
 
+img {
+    border: none !important;
+}
+
 .is-img-center {
 margin: 0 auto;
 }
