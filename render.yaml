@@ -2,7 +2,7 @@ databases:
     name: mobility
     plan: free
     databaseName: mobility
-    user: mobility
+    user: mobility_user
 
 services:
   - type: web
