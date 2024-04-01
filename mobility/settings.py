@@ -24,7 +24,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-&lifm%=)qd8@3pkxj1hzk_ir*5%kdx!c_a7o=i)^@t959b*1*q'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['*']
 
@@ -76,13 +76,15 @@ WSGI_APPLICATION = 'mobility.wsgi.application'
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
 
 # Replace the SQLite DATABASES configuration with PostgreSQL:
-DATABASES = {
-    'default': dj_database_url.config(       
-         # Replace this value with your local database's connection string.
-        default='postgres://mobility_user:hDUBegx5FxPi9X9r9haYsdfxgccqCGFV@dpg-co5g4rm3e1ms73b5paa0-a/mobility', 
-        conn_max_age=600    )
-    }
 
+if not DEBUG:
+    DATABASES = {'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))}
+else:
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.sqlite3',
+            'NAME': 'db.sqlite3',
+        }}
 # Password validation
 # https://docs.djangoproject.com/en/5.0/ref/settings/#auth-password-validators
 
