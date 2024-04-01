@@ -1,5 +1,5 @@
 databases:
-    name: mobilitydb
+    name: mobility
     plan: free
     databaseName: mobility
     user: mobility
@@ -9,11 +9,13 @@ services:
     plan: free
     name: mobility
     runtime: python
+    env: python
     buildCommand: "./build.sh"
-    startCommand: "python -m gunicorn mobility.asgi:application -k uvicorn.workers.UvicornWorker"    envVars:
+    startCommand: "python -m gunicorn mobility.asgi:application -k uvicorn.workers.UvicornWorker"
+    envVars:
       - key: DATABASE_URL
         fromDatabase:
-          name: mobilitydb
+          name: mobility
           property: connectionString
       - key: SECRET_KEY
         generateValue: true
