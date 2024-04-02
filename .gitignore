@@ -327,6 +327,8 @@ dist
 
 # Django stuff:
 staticfiles/*
+static/*
+
 
 # Flask stuff:
 
