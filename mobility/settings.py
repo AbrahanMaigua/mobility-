@@ -17,7 +17,7 @@ from dotenv import load_dotenv
 # Load environment variables from .env file
 load_dotenv()
 
-print(os.getenv('DATABASE_URL'))
+print(os.environ.get('DEBUG_DEV').capitalize())
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -29,7 +29,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = os.environ.get('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = os.environ.get('DEBUG').lower()
+DEBUG = False
 
 ALLOWED_HOSTS = ['*']
 
@@ -84,8 +84,7 @@ WSGI_APPLICATION = 'mobility.wsgi.application'
 # Replace the SQLite DATABASES configuration with PostgreSQL:
 
 
-if not DEBUG:
-    
+if DEBUG == False:
     DATABASES = {'default': dj_database_url.parse(os.getenv('DATABASE_URL'))}
 
 else:
@@ -94,6 +93,7 @@ else:
             'ENGINE': 'django.db.backends.sqlite3',
             'NAME': 'db.sqlite3',
         }}
+print(DATABASES)
 # Password validation
 # https://docs.djangoproject.com/en/5.0/ref/settings/#auth-password-validators
 
