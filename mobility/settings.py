@@ -12,7 +12,15 @@ https://docs.djangoproject.com/en/5.0/ref/settings/
 
 from pathlib import Path
 import dj_database_url
+
+
+
 import os
+from dotenv import load_dotenv
+# Load environment variables from .env file
+load_dotenv()
+
+print(os.getenv('DATABASE_URL'))
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -21,10 +29,10 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/5.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-&lifm%=)qd8@3pkxj1hzk_ir*5%kdx!c_a7o=i)^@t959b*1*q'
+SECRET_KEY = os.environ.get('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = os.environ.get('DEBUG').lower()
 
 ALLOWED_HOSTS = ['*']
 
@@ -77,8 +85,11 @@ WSGI_APPLICATION = 'mobility.wsgi.application'
 
 # Replace the SQLite DATABASES configuration with PostgreSQL:
 
+
 if not DEBUG:
-    DATABASES = {'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))}
+    
+    DATABASES = {'default': dj_database_url.parse(os.getenv('DATABASE_URL'))}
+
 else:
     DATABASES = {
         'default': {

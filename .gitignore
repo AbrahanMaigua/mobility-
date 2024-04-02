@@ -1,5 +1,5 @@
-# Created by https://www.toptal.com/developers/gitignore/api/python,node,django
-# Edit at https://www.toptal.com/developers/gitignore?templates=python,node,django
+# Created by https://www.toptal.com/developers/gitignore/api/django,node,python
+# Edit at https://www.toptal.com/developers/gitignore?templates=django,node,python
 
 ### Django ###
 *.log
@@ -326,6 +326,7 @@ dist
 # Translations
 
 # Django stuff:
+staticfiles/*
 
 # Flask stuff:
 
@@ -400,5 +401,4 @@ poetry.toml
 # LSP config files
 pyrightconfig.json
 
-# End of https://www.toptal.com/developers/gitignore/api/python,node,django
-staticfiles
+# End of https://www.toptal.com/developers/gitignore/api/django,node,python
